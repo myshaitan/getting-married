@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect with Element Removal</title>
+  <script>
+    window.onload = function() {
+      // 리디렉션하기 전에 3초 대기 (시간은 원하는 대로 조정 가능)
+      setTimeout(function() {
+        // 특정 URL로 리디렉션
+        window.location.href = "https://mcard.fromtoday.co.kr/w/DUeVOJ/"; // 원하는 리디렉션 URL로 변경
 
+        // 리디렉션이 완료된 후 해당 요소 제거
+        var element = document.querySelectorAll('.c-wartermark');
+        element.forEach(function(el) {
+          el.remove(); // 선택된 요소 제거
+        });
+      }, 1000); // 3초 대기 후 리디렉션 및 요소 제거
+    };
+  </script>
+</head>
+</html>
